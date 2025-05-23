@@ -1,0 +1,10 @@
+version: "1"
+volumes:
+data:
+export:
+networks:
+  idm_network:
+
+services:
+
+
