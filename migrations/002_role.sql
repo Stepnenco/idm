@@ -1,0 +1,9 @@
+CREATE TABLE role (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    emploee_id BIGINT NOT NULL,
+    role_name TEXT NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL,
+    updated_at TIMESTAMPTZ NOT NULL,
+    FOREIGN KEY(emploee_id) REFERENCES emploee(id) ON DELETE CASCADE
+
+)
