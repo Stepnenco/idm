@@ -1,0 +1,8 @@
+
+CREATE TABLE emploee (
+    id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    emploee_name TEXT NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL,
+    updated_at TIMESTAMPTZ NOT NULL
+
+)
