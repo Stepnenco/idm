@@ -3,17 +3,15 @@ volumes:
   export:
 networks:
   idm_network:
-
 services:
   postgres-db:
     image: docker.io/postgres:17-alpine
     container_name: postgres-server
     hostname: postgres-db
     ports:
-      - 127.0.0.1:5433:5433
+      - 127.0.0.1:5432:5432
     environment:
-       - POSTGRESS_PASSWORD=postgres
-       - POSTGRESS_HOST_AUTH_METHOD=trust
+       - POSTGRES_PASSWORD=postgres
     volumes:
       - data:/var/lib/postgresql/data
       - export:/export
